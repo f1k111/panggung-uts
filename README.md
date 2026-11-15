@@ -32,7 +32,7 @@ Aplikasi mobile (React Native / Expo) untuk pelatih, sutradara, dan ketua komuni
 
 ```bash
 # 1. Clone repo
-git clone https://github.com/<username>/panggung-uts.git
+git clone https://github.com/f1k111/panggung-uts.git
 cd panggung-uts/panggung
 
 # 2. Install dependensi
