@@ -34,11 +34,19 @@ export default function ProductionDetailScreen({ route, navigation }) {
 
   return (
     <SafeAreaView style={styles.safe} edges={['top']}>
-      {/* Tombol kembali */}
-      <Pressable style={styles.back} onPress={() => navigation.goBack()}>
-        <Feather name="chevron-left" size={18} color={colors.muted} />
-        <Text style={styles.backLabel}>PEMENTASAN</Text>
-      </Pressable>
+      {/* Tombol kembali + edit */}
+      <View style={styles.topBar}>
+        <Pressable style={styles.back} onPress={() => navigation.goBack()}>
+          <Feather name="chevron-left" size={18} color={colors.muted} />
+          <Text style={styles.backLabel}>PEMENTASAN</Text>
+        </Pressable>
+        <Pressable
+          onPress={() => navigation.navigate('ProductionForm', { mode: 'edit', productionId })}
+          hitSlop={8}
+        >
+          <Feather name="edit-2" size={18} color={colors.muted} />
+        </Pressable>
+      </View>
 
       <ScrollView contentContainerStyle={styles.content}>
         {/* Header pementasan */}
@@ -137,7 +145,8 @@ export default function ProductionDetailScreen({ route, navigation }) {
 
 const styles = StyleSheet.create({
   safe: { flex: 1, backgroundColor: colors.ink },
-  back: { flexDirection: 'row', alignItems: 'center', gap: 4, paddingHorizontal: space.lg, paddingTop: space.lg, paddingBottom: space.sm },
+  topBar: { flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center', paddingHorizontal: space.lg, paddingTop: space.lg, paddingBottom: space.sm },
+  back: { flexDirection: 'row', alignItems: 'center', gap: 4 },
   backLabel: { ...type.label, color: colors.muted },
   content: { paddingHorizontal: space.lg, paddingBottom: space.xxl },
   judul: { ...type.screenTitle, fontSize: 32, color: colors.cream, marginBottom: space.xs },
