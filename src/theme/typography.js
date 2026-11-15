@@ -1,7 +1,7 @@
-// Nama font harus cocok dengan yang dimuat useFonts di App.js
+// Nama font harus cocok dengan export package @expo-google-fonts/*
 export const fonts = {
-  bodoni: 'BodoniModa_9pt-Medium',
-  bodoniItalic: 'BodoniModa_9pt-MediumItalic',
+  bodoni: 'BodoniModa_500Medium',
+  bodoniItalic: 'BodoniModa_500Medium_Italic',
   sans: 'InstrumentSans_400Regular',
   sansMedium: 'InstrumentSans_500Medium',
   sansBold: 'InstrumentSans_600SemiBold',
